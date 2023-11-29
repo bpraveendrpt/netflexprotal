@@ -8,6 +8,34 @@ In the project directory, you can run:
 
 ### `npm start`
 
+## Tailwind CSS
+
+Configured Tailwind CSS
+
+
+### Features 
+  - login/Signup form
+  - Redirect to browser Page  
+- Browser (after login)
+    - Header
+    - Main Movies
+        - Tailer in Bg
+        - title & descreption
+        - Movie Suggetions
+         - movie List
+- NetflixGpd
+    - Search 
+    - Movie Suggentions
+
+
+
+
+
+
+
+
+
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
