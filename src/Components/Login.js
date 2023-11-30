@@ -50,7 +50,7 @@ const Login =()=>{
                     className=" p-4 my-4 w-full  bg-gray-800"
 
                 />
-                <p className=" text-red-600">{errorMessage}</p>
+                <p className=" text-red-600 py-2 text-lg">{errorMessage}</p>
                 <button 
                     onClick={handleButtonClick}
                     className="p-4 my-4 bg-red-700 w-full rounded-lg"> {isSignInForm?"Sin In": "Sign Up"}
