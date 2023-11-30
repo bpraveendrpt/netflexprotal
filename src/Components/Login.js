@@ -2,6 +2,8 @@
 import Header from "./Header";
 import { useRef, useState } from "react";
 import { checkValidateData } from "../utils/validate";
+import { auth } from "../utils/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login =()=>{
     const [isSignInForm, setisSignInForm] = useState(true);
@@ -10,11 +12,38 @@ const Login =()=>{
     const password = useRef(null);
 
     const handleButtonClick = () => {
-       //console.log(email.current.value);
-      // console.log(password.current.value);
+       // Validation checking
        const msg=  checkValidateData(email.current.value, password.current.value);
        seterrorMessage(msg);
+        // Authentication
+
+        if(msg) return;
+
+        if(!isSignInForm){
+            signInWithEmailAndPassword(
+                auth, 
+                email.current.value, 
+                password.current.value
+                )
+  .         then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                seterrorMessage(errorCode + "-" + errorMessage);
+            });
+
+        } else{
+
+        }
+
     }
+
+
+    
     const toggleSignInForm =() => {
         setisSignInForm(!isSignInForm);
     }
