@@ -5,8 +5,10 @@ import { checkValidateData } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { authar_logo, bg_image } from "../utils/constants";
 
 const Login =()=>{
     const [isSignInForm, setisSignInForm] = useState(true);
@@ -36,7 +38,7 @@ const Login =()=>{
             const user = userCredential.user;
             updateProfile(user, {
                 displayName: name.current.value, 
-                photoURL: "https://avatars.githubusercontent.com/u/53850436?s=96&v=4"
+                photoURL: authar_logo,
               }).then(() => {
                 // Profile updated!
                 const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -90,7 +92,7 @@ const Login =()=>{
             <Header />
             
             <div className="absolute">
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/c906271d-7184-4eec-83c9-b6d4c1a068ec/e89fdb2e-c0bd-46d9-855d-c63a951376cf/US-en-20231127-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+                <img src= {bg_image}
                 alt="Logo"
                 />
 
