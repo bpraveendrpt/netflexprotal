@@ -4,6 +4,9 @@ import useNowPlayingMovies from "../Hooks/useNowPlayingMovies";
 
 import SecoundaryContainer from "./SecoundaryContainer";
 import MainContainer from "./MainContainer";
+import usePopularMovies from "../Hooks/usePopularMovies";
+import useUpcomingMovies from "../Hooks/useUpcomingMovies";
+import useTopRatedMovies from "../Hooks/useTopRetedMovies";
 // import { useRef, useState } from "react";
 
 
@@ -11,6 +14,9 @@ const Browser =()=>{
 
     
     useNowPlayingMovies();
+    usePopularMovies();
+    useUpcomingMovies();
+    useTopRatedMovies();
 
     // const [incremt, setIncrement] = useState(0);
     // const name = useRef(null);
