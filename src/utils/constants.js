@@ -8,5 +8,8 @@ export const API_OPTIONS = {
     headers: {
       accept: 'application/json',
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNmU0ZGZjMGI1YjUzYjIyZTI0NTQ2NWYxZGRhZmUwOSIsInN1YiI6IjY1NjhmYjI4MmY4ZDA5MDExYzk0MDZjOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nM3dSzO3n8blfoAIbpZdReQ1dKzq4qwzhtAburwdsC0'
+ 
     }
   };
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";

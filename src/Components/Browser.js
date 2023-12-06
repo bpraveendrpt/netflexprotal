@@ -4,17 +4,67 @@ import useNowPlayingMovies from "../Hooks/useNowPlayingMovies";
 
 import SecoundaryContainer from "./SecoundaryContainer";
 import MainContainer from "./MainContainer";
+// import { useRef, useState } from "react";
 
 
 const Browser =()=>{
 
+    
     useNowPlayingMovies();
+
+    // const [incremt, setIncrement] = useState(0);
+    // const name = useRef(null);
+    
+
+    // const  incremtDo = () =>{
+    //   setIncrement(incremt + 1);
+    // }
+    
+    // const  decremtDo = () =>{
+    //   setIncrement(incremt - 1);
+    // }
+
+    //const [username, setName] = useState();
+    // const eventHandle =(e) =>{
+
+    // setName(e.target.value);
+    // }
 
     return(
         <div>
-            <Header />
-            <MainContainer />
+             <Header /> 
+             <MainContainer /> 
             <SecoundaryContainer />
+
+        {/* <div className="">
+
+            <input 
+            className=" text-lg w-200 bg-red-300 text-white"
+            type="text"
+            onChange={eventHandle}
+            value={username}
+            
+            />
+          <h1 className=" text-red-600">Name : {username}</h1>
+            
+
+
+
+        </div>
+
+
+            <div className='todo'>
+
+                
+          
+        <button className=" m-1 p-2 text-lg font-bold bg-black text-white"
+        onClick={incremtDo}>Add</button>
+        <p className=" text-lg text-red-500">{incremt}</p>
+        <button className=" m-1 p-2 text-lg font-bold  bg-black text-white"
+        onClick={decremtDo}>remove</button>
+
+      </div> */}
+
         </div>
     
     )

@@ -91,7 +91,7 @@ const Login =()=>{
         <div>
             <Header />
             
-            <div className="absolute">
+            <div className=" absolute">
                 <img src= {bg_image}
                 alt="Logo"
                 />
